@@ -26,7 +26,7 @@ def query_Q1(
 
     for state in all_states:
         final_state, _ = program.execute_program(state)
-        if _check_condition(final_state, goal_condition):
+        if not _check_condition(final_state, goal_condition):
             # if final state does not contain goal state retrun False
             return False
     return True
